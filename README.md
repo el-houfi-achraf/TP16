@@ -2,6 +2,10 @@
 
 Application frontend moderne développée avec **React**, **Apollo Client** et **Tailwind CSS** pour consommer une API GraphQL de gestion bancaire.
 
+
+https://github.com/user-attachments/assets/0fe2cb0b-ac84-4030-90c1-08e829475550
+
+
 ## 🚀 Fonctionnalités
 
 - **Gestion des Comptes** :
