@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# 🏦 Gestion des Comptes & Transactions - Client React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Application frontend moderne développée avec **React**, **Apollo Client** et **Tailwind CSS** pour consommer une API GraphQL de gestion bancaire.
 
-## Available Scripts
+## 🚀 Fonctionnalités
 
-In the project directory, you can run:
+- **Gestion des Comptes** :
+  - 📋 Visualisation de la liste des comptes bancaires.
+  - ➕ Création de nouveaux comptes (Courant/Épargne).
+  - 💰 Affichage des soldes et types de comptes.
 
-### `npm start`
+- **Gestion des Transactions** :
+  - 💸 Ajout de transactions (Dépôt/Retrait) sur un compte existant.
+  - 📜 Historique complet des transactions.
+  - 🔄 Mise à jour en temps réel des soldes après transaction.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Stack Technique
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Framework** : [React 18](https://reactjs.org/)
+- **Client GraphQL** : [Apollo Client](https://www.apollographql.com/docs/react/)
+- **Styles** : [Tailwind CSS](https://tailwindcss.com/)
+- **Langage** : JavaScript (ES6+)
 
-### `npm test`
+## ⚙️ Prérequis
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Avant de lancer l'application, assurez-vous d'avoir :
 
-### `npm run build`
+1.  **Node.js** (v16 ou supérieur) et **npm** installés.
+2.  Le **Backend Spring Boot** démarré et accessible sur `http://localhost:8082`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Clonez le dépôt ou accédez au dossier du projet :
+    ```bash
+    cd gestion-comptes
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2.  Installez les dépendances :
+    ```bash
+    npm install
+    ```
 
-### `npm run eject`
+## 🔧 Configuration
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+L'application est configurée pour communiquer avec le backend via un proxy pour éviter les problèmes de CORS en développement.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Fichier : `package.json`
+- Configuration : `"proxy": "http://localhost:8082"`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Si votre backend tourne sur un autre port, modifiez cette ligne dans le `package.json`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ▶️ Démarrage
 
-## Learn More
+Pour lancer l'application en mode développement :
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ouvrez [http://localhost:3000](http://localhost:3000) dans votre navigateur.
 
-### Code Splitting
+## 📂 Structure du Projet
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+src/
+├── 📂 apollo/       # Configuration du client Apollo
+├── 📂 components/   # Composants React (Vues)
+│   ├── CompteList.js
+│   ├── CreateCompte.js
+│   ├── TransactionForm.js
+│   └── TransactionList.js
+├── 📂 graphql/      # Définitions des requêtes et mutations
+│   ├── mutations.js
+│   ├── queries.js
+│   ├── types.js
+│   └── interfaces.js
+├── App.js          # Composant racine et mise en page
+└── index.js        # Point d'entrée
+```
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
